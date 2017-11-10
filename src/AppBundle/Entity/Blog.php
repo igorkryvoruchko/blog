@@ -21,6 +21,15 @@ class Blog
      */
     private $id;
 
+    /**
+     * @ORM\Column(name="category", type="text")
+     */
+    private $category;
+
+    /**
+     * @ORM\Column(name="post", type="text")
+     */
+    private $post;
 
     /**
      * Get id
@@ -31,5 +40,40 @@ class Blog
     {
         return $this->id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPost()
+    {
+        return $this->post;
+    }
+
+    /**
+     * @param mixed $post
+     */
+    public function setPost($post)
+    {
+        $this->post = $post;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+
+
 }
 
