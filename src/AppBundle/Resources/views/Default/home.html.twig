@@ -4,5 +4,14 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
+    <ul>
+        <li><a href="{{ path('add-post') }}">Add post</a></li>
+    </ul>
 <h1>Hello, this blog for mega coders!</h1>
+    <div class="container">
+        {% for contents in content %}
+            <h2>{{ contents.title }}</h2>
+            <p>{{ contents.post }}</p>
+        {% endfor %}
+    </div>
 {% endblock %}

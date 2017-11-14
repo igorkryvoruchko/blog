@@ -22,9 +22,9 @@ class Blog
     private $id;
 
     /**
-     * @ORM\Column(name="category", type="text")
+     * @ORM\Column(name="title", type="text")
      */
-    private $category;
+    private $title;
 
     /**
      * @ORM\Column(name="post", type="text")
@@ -44,9 +44,9 @@ class Blog
     /**
      * @return mixed
      */
-    public function getCategory()
+    public function getTitle()
     {
-        return $this->category;
+        return $this->title;
     }
 
     /**
@@ -66,14 +66,12 @@ class Blog
     }
 
     /**
-     * @param mixed $category
+     * @param mixed $title
      */
-    public function setCategory($category)
+    public function setTitle($title)
     {
-        $this->category = $category;
+        $this->title = $title;
     }
-
-
 
 }
 
