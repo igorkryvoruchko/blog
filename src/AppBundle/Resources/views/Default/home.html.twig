@@ -7,11 +7,12 @@
     <ul>
         <li><a href="{{ path('add-post') }}">Add post</a></li>
     </ul>
-<h1>Hello, this blog for mega coders!</h1>
+<h1>Hello, this blog is for mega coders!</h1>
     <div class="container">
         {% for contents in content %}
             <h2>{{ contents.title }}</h2>
             <p>{{ contents.post }}</p>
+            <span>Category: {{ contents.category }}</span> || <span><a href="{{ path('edit-post', {id: contents.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: contents.id}) }}">delete</a> </span>
         {% endfor %}
     </div>
 {% endblock %}

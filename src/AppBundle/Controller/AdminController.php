@@ -25,10 +25,9 @@ class AdminController extends Controller
     public function addPostAction(Request $request)
     {
         $content = new Blog();
-        $form = $this->createForm( FormType::class, $content );
+        $form = $this->createForm(FormType::class, $content);
         $form->handleRequest($request);
-        if($form -> isSubmitted() && $form -> isValid())
-        {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($content);
             $em->flush();
@@ -40,5 +39,40 @@ class AdminController extends Controller
         ));
     }
 
+    /**
+     * @Route("/edit-post/{id}", name="edit-post", requirements={"id" = "\d+"})
+     */
+    public function editPostAction($id, Request $request)
+    {
+        $em = $this->getDoctrine();
+        $content = $em->getRepository(Blog::class)->find($id);
+        if (!$content) {
+            throw $this->createAccessDeniedException('You cannot access this page!');
+        }
+        $form = $this->createForm(FormType::class, $content);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($content);
+            $em->flush();
+            return $this->redirectToRoute('homepage');
+        }
+        return $this->render('AppBundle:Default:create.html.twig', array(
+            'form_add_post' => $form->createView()
+        ));
+
+    }
+
+    /**
+     * @Route("/delete/{id}", name="delete-post", requirements={"id" = "\d+"})
+     */
+    public function deletePostAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $content = $em->getRepository(Blog::class)->find($id);
+        $em->remove($content);
+        $em->flush();
+        return $this->redirectToRoute('homepage');
+    }
 
 }

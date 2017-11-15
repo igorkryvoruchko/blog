@@ -32,6 +32,11 @@ class Blog
     private $post;
 
     /**
+     * @ORM\Column(name="category", type="text", options={"default":"no category"})
+     */
+    private $category;
+
+    /**
      * Get id
      *
      * @return int
@@ -71,6 +76,22 @@ class Blog
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
     }
 
 }

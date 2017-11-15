@@ -20,6 +20,7 @@ class FormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('title')
+            ->add('category')
             ->add('post')
             ->add('save', SubmitType::class);
     }
