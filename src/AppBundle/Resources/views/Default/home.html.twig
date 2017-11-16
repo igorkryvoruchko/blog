@@ -4,15 +4,20 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
+{% if is_granted('ROLE_ADMIN') %}
     <ul>
         <li><a href="{{ path('add-post') }}">Add post</a></li>
     </ul>
+{% endif %}
 <h1>Hello, this blog is for mega coders!</h1>
     <div class="container">
         {% for contents in content %}
             <h2>{{ contents.title }}</h2>
             <p>{{ contents.post }}</p>
-            <span>Category: {{ contents.category }}</span> || <span><a href="{{ path('edit-post', {id: contents.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: contents.id}) }}">delete</a> </span>
+            <span>Category: {{ contents.category }}</span>
+        {% if is_granted('ROLE_ADMIN') %}
+            <span><a href="{{ path('edit-post', {id: contents.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: contents.id}) }}">delete</a> </span>
+        {% endif %}
         {% endfor %}
     </div>
 {% endblock %}
