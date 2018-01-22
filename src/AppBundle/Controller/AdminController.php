@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Blog;
+use AppBundle\Entity\Comments;
 use AppBundle\Forms\FormType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -71,6 +72,18 @@ class AdminController extends Controller
         $em = $this->getDoctrine()->getManager();
         $content = $em->getRepository(Blog::class)->find($id);
         $em->remove($content);
+        $em->flush();
+        return $this->redirectToRoute('homepage');
+    }
+
+    /**
+     * @Route("/delete-comment/{id}", name="delete-comment", requirements={"id" = "\d+"})
+     */
+    public function deleteCommentAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $comment = $em->getRepository(Comments::class)->find($id);
+        $em->remove($comment);
         $em->flush();
         return $this->redirectToRoute('homepage');
     }

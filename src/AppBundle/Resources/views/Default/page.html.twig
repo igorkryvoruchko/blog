@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Page{% endblock %}
+
+{% block body %}
+    <h1>{{ content.title }}</h1>
+    <div class="container">
+
+            <p>{{ content.post }}</p>
+            <span>Category: {{ content.category }}</span>
+            <span class="float-right"><a href="{{ path('edit-post', {id: content.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: content.id}) }}">delete</a> </span>
+
+            {{ form(form_add_comment) }}
+
+            {% for comment in content.comments %}
+
+                <p>{{ comment.comment }} <a href="{{ path('delete-comment', {id: comment.id}) }}">delete</a> </p>
+
+            {% endfor %}
+    </div>
+{% endblock %}
