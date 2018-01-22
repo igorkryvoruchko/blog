@@ -6,12 +6,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9586d114-38bc-4ed0-afe7-468352b409bb/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/9586d114-38bc-4ed0-afe7-468352b409bb/_metadata_/metadata.values.at" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9586d114-38bc-4ed0-afe7-468352b409bb.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9586d114-38bc-4ed0-afe7-468352b409bb.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Blog.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Blog.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Forms/FormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Forms/FormType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/create.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/create.html.twig" />
+
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/home.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/home.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +57,9 @@
     <select />
   </component>
   <component name="FileEditorManager">
+
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,6 +71,7 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resourses/views/home.html.twig" />
+
         <option value="$PROJECT_DIR$/src/AppBundle/Forms/FormType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/create.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
@@ -77,6 +82,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/page.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Forms/FormCommentType.php" />
+
       </list>
     </option>
   </component>
@@ -144,7 +150,9 @@
               <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+
               <item name="Forms" type="2a2b976b:PhpTreeStructureProvider$1" />
+
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -174,6 +182,10 @@
           <select />
         </subPane>
       </pane>
+
+      <pane id="Scratches" />
+      <pane id="Scope" />
+
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,12 +195,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views/Default" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Resourses/Default" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/views/Default" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,6 +235,7 @@
       <workItem from="1510610427888" duration="4022000" />
       <workItem from="1510661270588" duration="2807000" />
       <workItem from="1510688245547" duration="2171000" />
+
       <workItem from="1510764354924" duration="3666000" />
       <workItem from="1512935685790" duration="741000" />
       <workItem from="1512988298222" duration="951000" />
@@ -242,16 +255,21 @@
       <workItem from="1516091504150" duration="41000" />
       <workItem from="1516299686778" duration="4548000" />
       <workItem from="1516568656155" duration="1974000" />
+
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+
     <option name="totallyTimeSpent" value="55725000" />
+
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="29" width="1299" height="743" extended-state="6" />
     <layout>
+
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2753392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14046289" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -302,6 +320,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -359,6 +378,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+
         </state>
       </provider>
     </entry>
@@ -410,6 +430,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+
+       
+
         </state>
       </provider>
     </entry>
@@ -453,6 +476,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+
         </state>
       </provider>
     </entry>
@@ -482,6 +506,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+
         </state>
       </provider>
     </entry>
@@ -588,20 +613,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Forms/FormType.php">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="630">
           <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/home.html.twig">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="288">
           <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+
           <folding />
         </state>
       </provider>
     </entry>
+
     <entry file="das://table:/db572e2f/9586d114-38bc-4ed0-afe7-468352b409bb/main.comments">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -649,14 +679,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-637">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="47">
           <caret line="35" column="66" lean-forward="false" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
+
           <folding />
         </state>
       </provider>
