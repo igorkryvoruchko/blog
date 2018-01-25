@@ -42,6 +42,7 @@ class Blog
 
     /**
      * @ORM\Column(name="category", type="text", options={"default":"no category"})
+     * 
      */
     private $category;
 
