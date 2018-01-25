@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\OneToMany;
 
 /**
  * Comments
@@ -18,7 +19,7 @@ class Comments
 {
     /**
      * Many Comments have One Blog.
-     * @ManyToOne(targetEntity="AppBundle\Entity\Blog")
+     * @ManyToOne(targetEntity="AppBundle\Entity\Blog", inversedBy="comments")
      * @JoinColumn(name="blog_id", referencedColumnName="id")
      */
     private $blog = null;
@@ -39,6 +40,16 @@ class Comments
      */
     private $comment;
 
+    /**
+     * One Comment has Many Reply.
+     *
+     * @var ArrayCollection $reply
+     *
+     * @OneToMany(targetEntity="AppBundle\Entity\Reply", mappedBy="comment", cascade = {"all"}, fetch="LAZY")
+     */
+    private $reply;
+
+
 
     public function __construct() {
         $this->blog = new ArrayCollection();
@@ -54,13 +65,6 @@ class Comments
         return $this->id;
     }
 
-    /**
-     * @return Collection|Blog[]
-     */
-    public function getBuildings()
-    {
-        return $this->blog;
-    }
 
     /**
      * @return mixed
@@ -108,6 +112,23 @@ class Comments
         $this->blog[] = $blog;
         return $this;
     }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getReply()
+    {
+        return $this->reply;
+    }
+
+    /**
+     * @param ArrayCollection $reply
+     */
+    public function setReply($reply)
+    {
+        $this->reply = $reply;
+    }
+
 
 }
 

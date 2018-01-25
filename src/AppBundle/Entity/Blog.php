@@ -51,7 +51,7 @@ class Blog
      *
      * @var ArrayCollection $comments
      *
-     * @OneToMany(targetEntity="AppBundle\Entity\Comments", mappedBy="blog", cascade = {"persist"}, fetch="LAZY")
+     * @OneToMany(targetEntity="AppBundle\Entity\Comments", mappedBy="blog", cascade = {"all"}, fetch="LAZY")
      */
     private $comments;
 

@@ -15,8 +15,12 @@
 
             {% for comment in content.comments %}
 
-                <p>{{ comment.comment }} <a href="{{ path('delete-comment', {id: comment.id}) }}">delete</a> </p>
+                <p>{{ comment.comment }} <a href="{{ path('delete-comment', {id: comment.id, id_page: content.id}) }}">delete</a> </p>
+                <a href="{{ path('reply', {id: content.id, id_comment: comment.id}) }}">Reply</a>
 
+                {% for reply in comment.reply %}
+                    <p style="margin-left: 50px">{{ reply.reply }}</p>
+                {% endfor %}
             {% endfor %}
     </div>
 {% endblock %}

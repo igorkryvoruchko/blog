@@ -10,10 +10,15 @@
     </head>
     <body>
         <div class="container">
-    <ul>
-        <li><a href="{{ path('homepage') }}">Home</a></li>
-        <li><a href="{{ path('add-post') }}">Add post</a></li>
-    </ul>
+            <nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #e3f2fd;">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="{{ path('homepage') }}">Home</a>
+                        <a class="nav-item nav-link" href="{{ path('add-post') }}">Add post</a>
+                    </div>
+                </div>
+            </nav>
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
         </div>

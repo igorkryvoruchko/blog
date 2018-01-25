@@ -77,15 +77,15 @@ class AdminController extends Controller
     }
 
     /**
-     * @Route("/delete-comment/{id}", name="delete-comment", requirements={"id" = "\d+"})
+     * @Route("/delete-comment/{id}/{id_page}", name="delete-comment", requirements={"id" = "\d+"})
      */
-    public function deleteCommentAction($id, Request $request)
+    public function deleteCommentAction($id, $id_page, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $comment = $em->getRepository(Comments::class)->find($id);
         $em->remove($comment);
         $em->flush();
-        return $this->redirectToRoute('homepage');
+        return $this->redirectToRoute('page', ['id' => $id_page]);
     }
 
 }
