@@ -151,7 +151,9 @@ class Blog
         $this->comments = new ArrayCollection();
     }
 
-
+    public function __toString() {
+        return $this->getCategory();
+    }
 
 }
 

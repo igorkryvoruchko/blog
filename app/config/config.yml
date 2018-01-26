@@ -81,7 +81,34 @@ fos_user:
 easy_admin:
     site_name: 'Blog'
     entities:
-        - AppBundle\Entity\User
-        - AppBundle\Entity\Blog
-        - AppBundle\Entity\Comments
-        - AppBundle\Entity\Reply
+          User:
+                class: AppBundle\Entity\User
+
+          Blog:
+                class: AppBundle\Entity\Blog
+                list:
+                    fields:
+                         - 'id'
+                         - { property: 'title' }
+                         - { property: 'post' }
+                         - { property: 'preview' }
+                         - { property: 'category' }
+                         - { property: 'comments'}
+                show:
+                    fields:
+                         - 'id'
+                         - { property: 'title' }
+                         - { property: 'post' }
+                         - { property: 'preview' }
+                         - { property: 'category' }
+                         - { property: 'comments'}
+
+          Comments:
+                class: AppBundle\Entity\Comments
+
+          Reply:
+                class: AppBundle\Entity\Reply
+
+
+
+

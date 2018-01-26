@@ -129,6 +129,10 @@ class Comments
         $this->reply = $reply;
     }
 
+    public function __toString() {
+        return $this->getComment();
+    }
+
 
 }
 
