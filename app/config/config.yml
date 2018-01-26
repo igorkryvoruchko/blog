@@ -10,7 +10,7 @@ parameters:
 
 framework:
     #esi: ~
-    translator: ~
+    translator: { fallbacks: [ "en" ] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -76,3 +76,12 @@ fos_user:
     from_email:
         address: "igor.php.13@gmail.com"
         sender_name: "igor"
+
+
+easy_admin:
+    site_name: 'Blog'
+    entities:
+        - AppBundle\Entity\User
+        - AppBundle\Entity\Blog
+        - AppBundle\Entity\Comments
+        - AppBundle\Entity\Reply
