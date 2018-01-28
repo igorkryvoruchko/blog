@@ -6,20 +6,16 @@
 {% block body %}
 
 
-
-{% if is_granted('ROLE_ADMIN') %}
-    <ul>
-        <li><a href="{{ path('add-post') }}">Add post</a></li>
-    </ul>
-{% endif %}
-
 <h1>Hello, this blog is for mega coders!</h1>
     <div>
         {% for contents in content %}
 
             <h2><a href="{{ path('page', {id: contents.id}) }}">{{ contents.title }}</a></h2>
             <p>{{ contents.preview }}</p>
-            <span>Category: {{ contents.category }}</span>  <span class="float-right"><a href="{{ path('edit-post', {id: contents.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: contents.id}) }}">delete</a> </span>
+            <span>Category: {{ contents.category }}</span>
+            {% if is_granted('ROLE_ADMIN') %}
+            <span class="float-right"><a href="{{ path('edit-post', {id: contents.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: contents.id}) }}">delete</a> </span>
+            {% endif %}
             <p><a href="{{ path('page', {id: contents.id}) }}">Reed more</a></p>
 
         {% endfor %}

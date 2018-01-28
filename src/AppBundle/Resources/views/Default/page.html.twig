@@ -9,13 +9,18 @@
 
             <p>{{ content.post }}</p>
             <span>Category: {{ content.category }}</span>
+            {% if is_granted('ROLE_ADMIN') %}
             <span class="float-right"><a href="{{ path('edit-post', {id: content.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: content.id}) }}">delete</a> </span>
-
+            {% endif %}
             {{ form(form_add_comment) }}
 
             {% for comment in content.comments %}
 
-                <p>{{ comment.comment }} <a href="{{ path('delete-comment', {id: comment.id, id_page: content.id}) }}">delete</a> </p>
+                <p>{{ comment.comment }}
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('delete-comment', {id: comment.id, id_page: content.id}) }}">delete</a>
+                    {% endif %}
+                </p>
                 <a href="{{ path('reply', {id: content.id, id_comment: comment.id}) }}">Reply</a>
 
                 {% for reply in comment.reply %}
