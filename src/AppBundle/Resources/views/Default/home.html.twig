@@ -11,13 +11,13 @@
         {% for contents in content %}
 
             <h2><a href="{{ path('page', {id: contents.id}) }}">{{ contents.title }}</a></h2>
+            <img src="/uploads/images/products/{{ contents.image }}">
             <p>{{ contents.preview }}</p>
             <span>Category: {{ contents.category }}</span>
             {% if is_granted('ROLE_ADMIN') %}
             <span class="float-right"><a href="{{ path('edit-post', {id: contents.id}) }}">edit</a> || <a href="{{ path('delete-post', {id: contents.id}) }}">delete</a> </span>
             {% endif %}
             <p><a href="{{ path('page', {id: contents.id}) }}">Reed more</a></p>
-
         {% endfor %}
     </div>
 {% endblock %}
